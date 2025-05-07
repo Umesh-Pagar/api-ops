@@ -19,12 +19,32 @@ namedValues:
       keyVault:
         identityClientId: "6f237e57-6314-4c72-8a21-27895ab60a7b"
         secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-3"
+  - name: application-insights-instrumentation-key
+    properties:
+      displayName: "application-insights-instrumentation-key"
+      keyVault:
+        identityClientId: "6f237e57-6314-4c72-8a21-27895ab60a7b"
+        secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/application-insights-instrumentation-key"
 
 loggers:
-  - name: [source (not destination) application insights name that you are overriding. Refer to the wiki at https://github.com/Azure/apiops/wiki/APIM-resources#loggers on options to override the logger name in higher environment]
+  - name: applicationinsights
     properties:
       loggerType: applicationInsights
       description: prod application insights
       resourceId: "/subscriptions/df7ed44c-e98a-43c4-af18-241e33567262/resourceGroups/RG-UmeshPagar/providers/microsoft.insights/components/appi-apiops-prod-eastus"
       credentials:
-        instrumentationKey: "{{Logger-Credentials--681b2662217d2012800698e5}}"
+        instrumentationKey: "{{application-insights-instrumentation-key}}"
+  - name: azuremonitor
+    properties:
+      loggerType: azureMonitor
+      isBuffered: true
+
+diagnostics:
+  - name: applicationinsights
+    properties:
+      verbosity: allErrors
+      loggerId: "/subscriptions/df7ed44c-e98a-43c4-af18-241e33567262/resourceGroups/RG-UmeshPagar/providers/Microsoft.ApiManagement/service/api-ops-prod-eastus/loggers/appi-apiops-prod-eastus"
+  - name: azuremonitor
+    properties:
+      verbosity: allErrors
+      loggerId: "/subscriptions/df7ed44c-e98a-43c4-af18-241e33567262/resourceGroups/RG-UmeshPagar/providers/Microsoft.ApiManagement/service/api-ops-prod-eastus/loggers/azuremonitor"
