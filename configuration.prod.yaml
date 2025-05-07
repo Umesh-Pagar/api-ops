@@ -42,9 +42,9 @@ loggers:
 diagnostics:
   - name: applicationinsights
     properties:
-      verbosity: allErrors
+      verbosity: Error
       loggerId: "/subscriptions/df7ed44c-e98a-43c4-af18-241e33567262/resourceGroups/RG-UmeshPagar/providers/Microsoft.ApiManagement/service/api-ops-prod-eastus/loggers/appi-apiops-prod-eastus"
   - name: azuremonitor
     properties:
-      verbosity: allErrors
+      verbosity: Error
       loggerId: "/subscriptions/df7ed44c-e98a-43c4-af18-241e33567262/resourceGroups/RG-UmeshPagar/providers/Microsoft.ApiManagement/service/api-ops-prod-eastus/loggers/azuremonitor"
