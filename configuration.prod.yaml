@@ -1,0 +1,30 @@
+apimServiceName: api-ops-prod-eastus
+
+namedValues:
+  - name: named-value-1
+    properties:
+      displayName: "named-value-1"
+      keyVault:
+        identityClientId: "ca3f32bb-6984-4f20-8960-57c96512ccb7"
+        secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-1"
+  - name: named-value-2
+    properties:
+      displayName: "named-value-2"
+      keyVault:
+        identityClientId: "ca3f32bb-6984-4f20-8960-57c96512ccb7"
+        secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-2"
+  - name: named-value-3
+    properties:
+      displayName: "named-value-3"
+      keyVault:
+        identityClientId: "ca3f32bb-6984-4f20-8960-57c96512ccb7"
+        secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-3"
+
+loggers:
+  - name: [source (not destination) application insights name that you are overriding. Refer to the wiki at https://github.com/Azure/apiops/wiki/APIM-resources#loggers on options to override the logger name in higher environment]
+    properties:
+      loggerType: applicationInsights
+      description: prod application insights
+      resourceId: "/subscriptions/df7ed44c-e98a-43c4-af18-241e33567262/resourceGroups/RG-UmeshPagar/providers/microsoft.insights/components/appi-apiops-prod-eastus"
+      credentials:
+        instrumentationKey: "{{Logger-Credentials--681b2662217d2012800698e5}}"
