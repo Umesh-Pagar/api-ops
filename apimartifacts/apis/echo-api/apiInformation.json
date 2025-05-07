@@ -8,7 +8,7 @@
     "protocols": [
       "https"
     ],
-    "serviceUrl": "https://echo.playground.azure-api.net/api",
+    "serviceUrl": "http://echoapi.cloudapp.net/api",
     "subscriptionKeyParameterNames": {
       "header": "Ocp-Apim-Subscription-Key",
       "query": "subscription-key"

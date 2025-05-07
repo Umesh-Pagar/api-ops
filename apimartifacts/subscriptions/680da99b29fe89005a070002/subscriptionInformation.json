@@ -1,8 +1,0 @@
-{
-  "properties": {
-    "scope": "/subscriptions/99302e3f-544c-4cb1-8705-81e5c0c3a231/resourceGroups/RG-UmeshPagar/providers/Microsoft.ApiManagement/service/api-ops-dev-eastus/products/unlimited",
-    "allowTracing": false,
-    "ownerId": "/subscriptions/99302e3f-544c-4cb1-8705-81e5c0c3a231/resourceGroups/RG-UmeshPagar/providers/Microsoft.ApiManagement/service/api-ops-dev-eastus/users/1",
-    "state": "active"
-  }
-}
