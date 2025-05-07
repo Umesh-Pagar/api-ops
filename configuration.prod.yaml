@@ -5,19 +5,19 @@ namedValues:
     properties:
       displayName: "named-value-1"
       keyVault:
-        identityClientId: "ca3f32bb-6984-4f20-8960-57c96512ccb7"
+        identityClientId: "6f237e57-6314-4c72-8a21-27895ab60a7b"
         secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-1"
   - name: named-value-2
     properties:
       displayName: "named-value-2"
       keyVault:
-        identityClientId: "ca3f32bb-6984-4f20-8960-57c96512ccb7"
+        identityClientId: "6f237e57-6314-4c72-8a21-27895ab60a7b"
         secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-2"
   - name: named-value-3
     properties:
       displayName: "named-value-3"
       keyVault:
-        identityClientId: "ca3f32bb-6984-4f20-8960-57c96512ccb7"
+        identityClientId: "6f237e57-6314-4c72-8a21-27895ab60a7b"
         secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-3"
 
 loggers:
