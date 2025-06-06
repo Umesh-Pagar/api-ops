@@ -1,0 +1,19 @@
+apiNames:
+  - echo-api
+
+loggerNames:
+  - azuremonitor
+  - appi-apiops-prod-eastus
+  - applicationinsights
+
+namedValueNames:
+  - application-insights-instrumentation-key
+  - 681b2662217d2012800698e4
+  - named-value-1
+  - named-value-2
+  - named-value-3
+
+productNames:
+  - starter
+  - unlimited
+
