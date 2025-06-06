@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "path": "echo",
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "isCurrent": true,
+    "displayName": "Echo API",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "http://echoapi.cloudapp.net/api",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}
