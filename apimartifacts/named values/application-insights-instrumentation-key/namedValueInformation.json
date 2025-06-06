@@ -1,7 +1,0 @@
-{
-  "properties": {
-    "displayName": "application-insights-instrumentation-key",
-    "secret": true,
-    "tags": []
-  }
-}

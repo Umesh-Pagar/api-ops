@@ -1,7 +1,0 @@
-{
-  "properties": {
-    "displayName": "Developers",
-    "description": "Developers is a built-in group. Its membership is managed by the system. Signed-in users fall into this group.",
-    "type": "system"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "properties": {
-    "displayName": "Administrators",
-    "description": "Administrators is a built-in group containing the admin email account provided at the time of service creation. Its membership is managed by the system.",
-    "type": "system"
-  }
-}
