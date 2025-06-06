@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "loggerType": "applicationInsights",
+    "credentials": {
+      "instrumentationKey": "{{Logger-Credentials--681b2646217d201e18b7f686}}"
+    },
+    "isBuffered": true,
+    "resourceId": "/subscriptions/14688d65-0570-4508-a201-955fbc8abe06/resourceGroups/RG-UmeshPagar/providers/microsoft.insights/components/appi-apiops-dev-eastus"
+  }
+}
