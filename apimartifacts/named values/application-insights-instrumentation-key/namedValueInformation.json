@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "displayName": "application-insights-instrumentation-key",
+    "keyVault": {
+      "secretIdentifier": "https://kv-apiops-dev-eastus.vault.azure.net/secrets/application-insights-instrumentation-key"
+    },
+    "secret": true,
+    "tags": []
+  }
+}
