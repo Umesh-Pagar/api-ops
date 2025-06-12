@@ -1,0 +1,34 @@
+{
+  "properties": {
+    "loggerId": "/subscriptions/14688d65-0570-4508-a201-955fbc8abe06/resourceGroups/RG-UmeshPagar/providers/Microsoft.ApiManagement/service/apiops-dev-eastus/loggers/azuremonitor",
+    "backend": {
+      "request": {
+        "dataMasking": {
+          "queryParams": [
+            {
+              "mode": "Hide",
+              "value": "*"
+            }
+          ]
+        }
+      }
+    },
+    "frontend": {
+      "request": {
+        "dataMasking": {
+          "queryParams": [
+            {
+              "mode": "Hide",
+              "value": "*"
+            }
+          ]
+        }
+      }
+    },
+    "logClientIp": true,
+    "sampling": {
+      "percentage": 100,
+      "samplingType": "fixed"
+    }
+  }
+}

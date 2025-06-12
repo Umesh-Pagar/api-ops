@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "loggerType": "applicationInsights",
+    "credentials": {
+      "instrumentationKey": "{{application-insights-instrumentation-key}}"
+    },
+    "description": "Application Insights logger for API Management",
+    "isBuffered": true
+  }
+}
