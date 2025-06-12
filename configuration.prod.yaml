@@ -5,25 +5,25 @@ namedValues:
     properties:
       displayName: "named-value-1"
       keyVault:
-        identityClientId: "c52e89f4-8f46-466d-a946-fc451398b455"
+        identityClientId: "d5ffcb65-07a4-4513-9a39-48bd9e4f245b"
         secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-1"
   - name: named-value-2
     properties:
       displayName: "named-value-2"
       keyVault:
-        identityClientId: "c52e89f4-8f46-466d-a946-fc451398b455"
+        identityClientId: "d5ffcb65-07a4-4513-9a39-48bd9e4f245b"
         secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-2"
   - name: named-value-3
     properties:
       displayName: "named-value-3"
       keyVault:
-        identityClientId: "c52e89f4-8f46-466d-a946-fc451398b455"
+        identityClientId: "d5ffcb65-07a4-4513-9a39-48bd9e4f245b"
         secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-3"
   - name: application-insights-instrumentation-key
     properties:
       displayName: "application-insights-instrumentation-key"
       keyVault:
-        identityClientId: "c52e89f4-8f46-466d-a946-fc451398b455"
+        identityClientId: "d5ffcb65-07a4-4513-9a39-48bd9e4f245b"
         secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/application-insights-instrumentation-key"
 
 loggers:
