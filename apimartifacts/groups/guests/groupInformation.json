@@ -1,0 +1,7 @@
+{
+  "properties": {
+    "displayName": "Guests",
+    "description": "Guests is a built-in group. Its membership is managed by the system. Unauthenticated users visiting the developer portal fall into this group.",
+    "type": "system"
+  }
+}
