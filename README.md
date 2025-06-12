@@ -872,6 +872,55 @@ Error: Access denied to Key Vault secret
 - Ensure Key Vault URL and secret name are correct
 - Validate subscription and resource group permissions
 
+**Problem**: Managed Identity Configuration Error with Key Vault
+```
+Error: HTTP request to URI https://management.azure.com/subscriptions/***/resourceGroups/***/providers/Microsoft.ApiManagement/service/***/namedValues/named-value-2?api-version=2023-09-01-preview failed with status code 400. Content is '{"error":{"code":"ValidationError","message":"One or more fields contain incorrect values:","details":[{"code":"ValidationError","target":"identityClientId","message":"Can not find Managed Identity with provided IdentityClientId : d5ffcb65-07a4-4513-9a39-48bd9e4f245b. For more information please see aka.ms/apimmsi."}]}}'
+```
+
+**Root Cause**: Using system-assigned managed identity client ID in the `identityClientId` field, which specifically requires a user-assigned managed identity.
+
+**Solutions**:
+
+**Option 1: Use System-Assigned Managed Identity (Recommended)**
+Remove the `identityClientId` field entirely from your configuration:
+```yaml
+# ✅ CORRECT - System-assigned identity
+namedValues:
+  - name: named-value-1
+    properties:
+      displayName: "named-value-1"
+      keyVault:
+        secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-1"
+        # No identityClientId = uses system-assigned identity
+```
+
+**Option 2: Use User-Assigned Managed Identity**
+Create a user-assigned managed identity and use its client ID:
+```yaml
+# ✅ CORRECT - User-assigned identity
+namedValues:
+  - name: named-value-1
+    properties:
+      displayName: "named-value-1"
+      keyVault:
+        identityClientId: "12345678-1234-1234-1234-123456789abc"  # User-assigned identity client ID
+        secretIdentifier: "https://kv-apiops-prod-eastus.vault.azure.net/secrets/secret-1"
+```
+
+**Key Differences Between Identity Types**:
+
+| Property | System-Assigned | User-Assigned |
+|----------|----------------|---------------|
+| **Creation** | Created with APIM instance | Created as standalone resource |
+| **Configuration** | No `identityClientId` needed | Requires `identityClientId` |
+| **Key Vault Firewall** | Required when firewall enabled | Can be used with firewall |
+| **Lifecycle** | Tied to APIM instance | Independent lifecycle |
+
+**Important Notes**:
+- If Key Vault firewall is enabled, you **must** use system-assigned managed identity
+- The `identityClientId` field expects a **user-assigned** managed identity client ID, not system-assigned
+- System-assigned identity client IDs cannot be used in the `identityClientId` field
+
 **Problem**: Logger configuration errors
 ```
 Error: Logger resource not found
